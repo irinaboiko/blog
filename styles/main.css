@@ -148,3 +148,24 @@ textarea {
     font-size: 160px;
     margin-bottom: 20px;
 }
+
+.btn-edit,
+.btn-delete {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 48px;
+    border-radius: 3px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
