@@ -15,7 +15,6 @@ const getPost = (request, response) => {
 };
 
 const deletePost = (request, response) => {
-  const title = "Post";
   Post
     .findByIdAndDelete(request.params.id)
     .then((result) => response.sendStatus(200))
@@ -49,7 +48,7 @@ const getPosts = (request, response) => {
     .catch((error) => handleError(response, error));
 };
 
-const getAddPost = (request, response) => {
+const addPost = (request, response) => {
   const {title, author, text} = request.body;
   const post = new Post({title, author, text});
 
@@ -58,7 +57,8 @@ const getAddPost = (request, response) => {
     .then((result) => response.redirect('/posts'))
     .catch((error) => handleError(response, error));
 };
-const addPost = (request, response) => {
+
+const getAddPost = (request, response) => {
   const title = "Add post";
 
   response.render(createPath("add-post"), {title});
@@ -70,6 +70,6 @@ module.exports = {
   getEditPost,
   editPost,
   getPosts,
+  addPost,
   getAddPost,
-  addPost
 }

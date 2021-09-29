@@ -21,8 +21,8 @@ router.put('/edit/:id', editPost);
 
 router.get('/posts', getPosts);
 
-router.post('/add-post', getAddPost);
+router.post('/add-post', addPost);
 
-router.get('/add-post', addPost);
+router.get('/add-post', getAddPost);
 
 module.exports = router;
